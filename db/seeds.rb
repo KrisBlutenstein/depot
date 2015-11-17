@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+category = Category.create(name: 'sport')
+10.times do
+  category.products.create(name: 'bike', description: 'sport bike', price: 1500, image: File.open("#{Rails.root}/image.png"))
+end

@@ -1,0 +1,9 @@
+- @products.each do |product|
+  div
+    div
+      = image_tag(product.image, size: '100x100')
+    p= product.name
+    p= product.description
+    p= product.price
+
+= paginate @products

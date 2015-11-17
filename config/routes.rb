@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  resources :products, only: :index
+
   resource :user
   resource :session, only: [:new, :create, :destroy]
-  root 'welcome#index'
+
+  root 'products#index'
+
   resources :users do
     get :confirm, on: :member
   end

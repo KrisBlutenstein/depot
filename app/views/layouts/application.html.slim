@@ -11,4 +11,8 @@ body
     = link_to 'Sign Out', session_path, method: :delete, remote: true
   = render 'shared/flashes'
   div class='container'
-    = yield
+    .col-md-2
+      - Category.all.each do |category|
+        p= category.name
+    .col-md-10
+      = yield
